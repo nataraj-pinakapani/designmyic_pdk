@@ -1,0 +1,71 @@
+magic
+tech minimum
+magscale 1 2
+timestamp 1644097982
+<< labels >>
+rlabel  s 0 51 20 54 6 AMUXBUS_A
+port 1 nsew signal bidirectional
+rlabel  s 0 46 20 49 6 AMUXBUS_B
+port 2 nsew signal bidirectional
+rlabel  s 0 46 20 55 6 VSSA
+port 3 nsew ground bidirectional
+rlabel  s 0 54 20 55 6 VSSA
+port 3 nsew ground bidirectional
+rlabel  s 0 46 20 46 6 VSSA
+port 3 nsew ground bidirectional
+rlabel  s 0 35 20 38 6 VSSA
+port 3 nsew ground bidirectional
+rlabel  s 0 35 20 38 6 VSSA
+port 3 nsew ground bidirectional
+rlabel  s 0 13 20 16 6 VDDA
+port 4 nsew power bidirectional
+rlabel  s 0 13 20 16 6 VDDA
+port 4 nsew power bidirectional
+rlabel  s 0 30 20 33 6 VSWITCH
+port 5 nsew power bidirectional
+rlabel  s 0 18 20 22 6 VSWITCH
+port 5 nsew power bidirectional
+rlabel  s 0 30 20 33 6 VSWITCH
+port 5 nsew power bidirectional
+rlabel nfet_brown s 1 18 19 22 6 VSWITCH
+port 5 nsew power bidirectional
+rlabel nfet_brown s 1 30 19 33 6 VSWITCH
+port 5 nsew power bidirectional
+rlabel 
+ s 1 18 19 33 6 VSWITCH
+port 5 nsew power bidirectional
+rlabel  s 0 62 20 66 6 VDDIO_Q
+port 5 nsew power bidirectional
+rlabel  s 0 62 20 67 6 VDDIO_Q
+port 5 nsew power bidirectional
+rlabel  s 0 0 20 11 6 VCCHIB
+port 7 nsew power bidirectional
+rlabel  s 0 0 20 5 6 VCCHIB
+port 7 nsew power bidirectional
+rlabel  s 0 68 20 93 6 VDDIO
+port 6 nsew power bidirectional
+rlabel  s 0 68 20 93 6 VDDIO
+port 6 nsew power bidirectional
+rlabel  s 0 18 20 22 6 VDDIO
+port 6 nsew power bidirectional
+rlabel  s 0 7 20 12 6 VCCD
+port 7 nsew power bidirectional
+rlabel  s 0 24 20 28 6 VSSIO
+port 8 nsew ground bidirectional
+rlabel  s 0 24 20 28 6 VSSIO
+port 8 nsew ground bidirectional
+rlabel  s 0 174 20 198 6 VSSIO
+port 8 nsew ground bidirectional
+rlabel  s 0 40 20 44 6 VSSD
+port 9 nsew ground bidirectional
+rlabel  s 0 40 20 44 6 VSSD
+port 9 nsew ground bidirectional
+rlabel  s 0 56 20 61 6 VSSIO_Q
+port 10 nsew ground bidirectional
+rlabel  s 0 56 20 61 6 VSSIO_Q
+port 10 nsew ground bidirectional
+<< properties >>
+string LEFclass PAD AREAIO
+string FIXED_BBOX 0 0 20 198
+string LEFview TRUE
+<< end >>

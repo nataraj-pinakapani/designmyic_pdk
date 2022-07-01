@@ -1,0 +1,44 @@
+magic
+tech minimum
+magscale 1 2
+timestamp 1644097874
+<< labels >>
+rlabel r s 42 2 45 20 6 C0
+port 1 nsew
+rlabel r s 35 2 37 20 6 C0
+port 1 nsew
+rlabel r s 29 2 30 20 6 C0
+port 1 nsew
+rlabel r s 22 2 24 20 6 C0
+port 1 nsew
+rlabel r s 16 2 18 20 6 C0
+port 1 nsew
+rlabel r s 10 2 11 20 6 C0
+port 1 nsew
+rlabel r s 3 2 5 20 6 C0
+port 1 nsew
+rlabel r s 0 0 45 2 6 C0
+port 1 nsew
+rlabel r s 38 3 40 21 6 C1
+port 2 nsew
+rlabel r s 32 3 34 21 6 C1
+port 2 nsew
+rlabel r s 26 3 27 21 6 C1
+port 2 nsew
+rlabel r s 19 3 21 21 6 C1
+port 2 nsew
+rlabel r s 13 3 14 21 6 C1
+port 2 nsew
+rlabel r s 6 3 8 21 6 C1
+port 2 nsew
+rlabel r s 0 21 45 23 6 C1
+port 2 nsew
+rlabel r s 0 3 2 21 6 C1
+port 2 nsew
+rlabel metal_blue s 15 13 15 13 6 SUB
+port 3 nsew
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX 0 0 45 23
+string LEFview TRUE
+<< end >>

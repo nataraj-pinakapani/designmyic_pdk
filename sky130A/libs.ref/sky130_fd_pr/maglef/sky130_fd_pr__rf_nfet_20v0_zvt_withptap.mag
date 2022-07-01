@@ -1,0 +1,24 @@
+magic
+tech minimum
+magscale 1 2
+timestamp 1644097874
+<< labels >>
+rlabel  s -1 -1 2 31 4 D
+port 1 nsew
+rlabel  s 10 -5 10 35 6 PSUB
+port 2 nsew
+rlabel  s -9 35 10 35 4 PSUB
+port 2 nsew
+rlabel  s -9 -5 -9 35 4 PSUB
+port 2 nsew
+rlabel  s -9 -5 10 -5 2 PSUB
+port 2 nsew
+rlabel  s -9 -1 -6 31 4 S
+port 3 nsew
+rlabel  s 6 -1 9 31 6 S
+port 3 nsew
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX -9 -5 10 35
+string LEFview TRUE
+<< end >>

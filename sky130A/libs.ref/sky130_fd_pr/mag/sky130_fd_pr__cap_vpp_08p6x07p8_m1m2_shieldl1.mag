@@ -1,0 +1,8 @@
+magic
+tech minimum
+timestamp 1644097873
+<< properties >>
+string gencell sky130_fd_pr__cap_vpp_08p6x07p8_m1m2_shieldl1
+string parameter m=1
+string library sky130
+<< end >>

@@ -1,0 +1,30 @@
+magic
+tech minimum
+magscale 1 2
+timestamp 1644097874
+<< labels >>
+rlabel  s 0 3 5 4 6 DRAIN
+port 1 nsew
+rlabel rotate s 2 4 3 5 6 GATE
+port 2 nsew
+rlabel rotate s 2 0 3 1 8 GATE
+port 2 nsew
+rlabel  s 2 4 3 5 6 GATE
+port 2 nsew
+rlabel  s 2 0 3 1 8 GATE
+port 2 nsew
+rlabel  s 2 4 3 5 6 GATE
+port 2 nsew
+rlabel  s 2 0 3 1 8 GATE
+port 2 nsew
+rlabel  s 0 1 5 2 6 SOURCE
+port 3 nsew
+rlabel  s 0 1 1 4 4 SUBSTRATE
+port 4 nsew
+rlabel  s 5 1 5 4 6 SUBSTRATE
+port 4 nsew
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX 0 0 5 5
+string LEFview TRUE
+<< end >>

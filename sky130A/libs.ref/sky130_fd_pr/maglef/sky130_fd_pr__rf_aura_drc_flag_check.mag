@@ -1,0 +1,16 @@
+magic
+tech minimum
+magscale 1 2
+timestamp 1644097874
+<< labels >>
+rlabel  s 9 -205 12 -202 8 B_P
+port 1 nsew
+rlabel  s 9 9 12 12 6 NWELL
+port 2 nsew
+rlabel  s 60 91 63 94 6 VGND
+port 3 nsew ground default
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX 0 -214 1556 198
+string LEFview TRUE
+<< end >>

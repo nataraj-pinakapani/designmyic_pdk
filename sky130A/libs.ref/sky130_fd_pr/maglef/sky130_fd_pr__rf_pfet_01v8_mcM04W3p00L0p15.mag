@@ -1,0 +1,82 @@
+magic
+tech minimum
+magscale 1 2
+timestamp 1644097874
+<< labels >>
+rlabel rotate s 4 5 4 5 6 BULK
+port 4 nsew
+rlabel rotate s 4 4 4 5 6 BULK
+port 4 nsew
+rlabel rotate s 4 4 4 4 6 BULK
+port 4 nsew
+rlabel rotate s 4 4 4 4 6 BULK
+port 4 nsew
+rlabel rotate s 4 3 4 4 6 BULK
+port 4 nsew
+rlabel rotate s 4 3 4 3 6 BULK
+port 4 nsew
+rlabel rotate s 4 3 4 3 6 BULK
+port 4 nsew
+rlabel rotate s 0 5 0 5 4 BULK
+port 4 nsew
+rlabel rotate s 0 4 0 5 4 BULK
+port 4 nsew
+rlabel rotate s 0 4 0 4 4 BULK
+port 4 nsew
+rlabel rotate s 0 4 0 4 4 BULK
+port 4 nsew
+rlabel rotate s 0 3 0 4 4 BULK
+port 4 nsew
+rlabel rotate s 0 3 0 3 4 BULK
+port 4 nsew
+rlabel rotate s 0 3 0 3 4 BULK
+port 4 nsew
+rlabel  s 4 2 4 6 6 BULK
+port 4 nsew
+rlabel  s 0 2 0 6 4 BULK
+port 4 nsew
+rlabel  s 4 3 4 5 6 BULK
+port 4 nsew
+rlabel  s 0 3 0 5 4 BULK
+port 4 nsew
+rlabel  s 0 4 4 5 6 DRAIN
+port 1 nsew
+rlabel rotate s 3 6 3 6 6 GATE
+port 2 nsew
+rlabel rotate s 3 2 3 2 6 GATE
+port 2 nsew
+rlabel rotate s 3 6 3 6 6 GATE
+port 2 nsew
+rlabel rotate s 3 2 3 2 6 GATE
+port 2 nsew
+rlabel rotate s 2 6 2 6 6 GATE
+port 2 nsew
+rlabel rotate s 2 2 2 2 6 GATE
+port 2 nsew
+rlabel rotate s 2 6 2 6 6 GATE
+port 2 nsew
+rlabel rotate s 2 2 2 2 6 GATE
+port 2 nsew
+rlabel rotate s 1 6 2 6 6 GATE
+port 2 nsew
+rlabel rotate s 1 2 2 2 6 GATE
+port 2 nsew
+rlabel rotate s 1 6 1 6 6 GATE
+port 2 nsew
+rlabel rotate s 1 2 1 2 6 GATE
+port 2 nsew
+rlabel  s 1 6 4 6 6 GATE
+port 2 nsew
+rlabel  s 1 2 4 2 6 GATE
+port 2 nsew
+rlabel  s 1 5 3 6 6 GATE
+port 2 nsew
+rlabel  s 1 2 3 2 6 GATE
+port 2 nsew
+rlabel  s 0 2 4 4 6 SOURCE
+port 3 nsew
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX 0 0 5 8
+string LEFview TRUE
+<< end >>

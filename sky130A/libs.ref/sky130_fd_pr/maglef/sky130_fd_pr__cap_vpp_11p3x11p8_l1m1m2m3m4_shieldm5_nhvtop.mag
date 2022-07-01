@@ -1,0 +1,274 @@
+magic
+tech minimum
+magscale 1 2
+timestamp 1644097874
+<< labels >>
+rlabel  s 21 0 21 23 6 C0
+port 1 nsew
+rlabel  s 20 18 20 22 6 C0
+port 1 nsew
+rlabel  s 20 12 20 17 6 C0
+port 1 nsew
+rlabel  s 20 6 20 11 6 C0
+port 1 nsew
+rlabel  s 20 1 20 6 6 C0
+port 1 nsew
+rlabel  s 19 18 19 22 6 C0
+port 1 nsew
+rlabel  s 19 12 19 17 6 C0
+port 1 nsew
+rlabel  s 19 6 19 11 6 C0
+port 1 nsew
+rlabel  s 19 1 19 6 6 C0
+port 1 nsew
+rlabel  s 17 18 18 22 6 C0
+port 1 nsew
+rlabel  s 17 12 18 17 6 C0
+port 1 nsew
+rlabel  s 17 6 18 11 6 C0
+port 1 nsew
+rlabel  s 17 1 18 6 6 C0
+port 1 nsew
+rlabel  s 16 18 16 22 6 C0
+port 1 nsew
+rlabel  s 16 12 16 17 6 C0
+port 1 nsew
+rlabel  s 16 6 16 11 6 C0
+port 1 nsew
+rlabel  s 16 1 16 6 6 C0
+port 1 nsew
+rlabel  s 14 18 15 22 6 C0
+port 1 nsew
+rlabel  s 14 12 15 17 6 C0
+port 1 nsew
+rlabel  s 14 6 15 11 6 C0
+port 1 nsew
+rlabel  s 14 1 15 6 6 C0
+port 1 nsew
+rlabel  s 13 18 14 22 6 C0
+port 1 nsew
+rlabel  s 13 12 14 17 6 C0
+port 1 nsew
+rlabel  s 13 6 14 11 6 C0
+port 1 nsew
+rlabel  s 13 1 14 6 6 C0
+port 1 nsew
+rlabel  s 12 18 12 22 6 C0
+port 1 nsew
+rlabel  s 12 17 20 18 6 C0
+port 1 nsew
+rlabel  s 12 12 12 17 6 C0
+port 1 nsew
+rlabel  s 12 6 12 11 6 C0
+port 1 nsew
+rlabel  s 12 6 20 6 6 C0
+port 1 nsew
+rlabel  s 12 1 12 6 6 C0
+port 1 nsew
+rlabel  s 11 0 11 23 6 C0
+port 1 nsew
+rlabel  s 9 18 10 22 6 C0
+port 1 nsew
+rlabel  s 9 12 10 17 6 C0
+port 1 nsew
+rlabel  s 9 6 10 11 6 C0
+port 1 nsew
+rlabel  s 9 1 10 6 6 C0
+port 1 nsew
+rlabel  s 8 18 9 22 6 C0
+port 1 nsew
+rlabel  s 8 12 9 17 6 C0
+port 1 nsew
+rlabel  s 8 6 9 11 6 C0
+port 1 nsew
+rlabel  s 8 1 9 6 6 C0
+port 1 nsew
+rlabel  s 7 18 7 22 6 C0
+port 1 nsew
+rlabel  s 7 12 7 17 6 C0
+port 1 nsew
+rlabel  s 7 6 7 11 6 C0
+port 1 nsew
+rlabel  s 7 1 7 6 6 C0
+port 1 nsew
+rlabel  s 5 18 6 22 6 C0
+port 1 nsew
+rlabel  s 5 12 6 17 6 C0
+port 1 nsew
+rlabel  s 5 6 6 11 6 C0
+port 1 nsew
+rlabel  s 5 1 6 6 6 C0
+port 1 nsew
+rlabel  s 4 18 4 22 6 C0
+port 1 nsew
+rlabel  s 4 12 4 17 6 C0
+port 1 nsew
+rlabel  s 4 6 4 11 6 C0
+port 1 nsew
+rlabel  s 4 1 4 6 6 C0
+port 1 nsew
+rlabel  s 3 18 3 22 6 C0
+port 1 nsew
+rlabel  s 3 12 3 17 6 C0
+port 1 nsew
+rlabel  s 3 6 3 11 6 C0
+port 1 nsew
+rlabel  s 3 1 3 6 6 C0
+port 1 nsew
+rlabel  s 2 18 2 22 6 C0
+port 1 nsew
+rlabel  s 2 17 10 18 6 C0
+port 1 nsew
+rlabel  s 2 12 2 17 6 C0
+port 1 nsew
+rlabel  s 2 6 2 11 6 C0
+port 1 nsew
+rlabel  s 2 6 10 6 6 C0
+port 1 nsew
+rlabel  s 2 1 2 6 6 C0
+port 1 nsew
+rlabel  s 0 0 1 23 4 C0
+port 1 nsew
+rlabel r s 0 0 22 23 6 M5
+port 2 nsew
+rlabel  s 20 12 21 23 6 SUB
+port 3 nsew
+rlabel  s 20 1 21 11 6 SUB
+port 3 nsew
+rlabel  s 19 18 20 23 6 SUB
+port 3 nsew
+rlabel  s 19 12 20 17 6 SUB
+port 3 nsew
+rlabel  s 19 6 20 11 6 SUB
+port 3 nsew
+rlabel  s 19 1 20 5 6 SUB
+port 3 nsew
+rlabel  s 18 18 18 23 6 SUB
+port 3 nsew
+rlabel  s 18 12 18 17 6 SUB
+port 3 nsew
+rlabel  s 18 6 18 11 6 SUB
+port 3 nsew
+rlabel  s 18 1 18 5 6 SUB
+port 3 nsew
+rlabel  s 17 18 17 23 6 SUB
+port 3 nsew
+rlabel  s 17 12 17 17 6 SUB
+port 3 nsew
+rlabel  s 17 6 17 11 6 SUB
+port 3 nsew
+rlabel  s 17 1 17 5 6 SUB
+port 3 nsew
+rlabel  s 15 18 15 23 6 SUB
+port 3 nsew
+rlabel  s 15 12 15 17 6 SUB
+port 3 nsew
+rlabel  s 15 6 15 11 6 SUB
+port 3 nsew
+rlabel  s 15 1 15 5 6 SUB
+port 3 nsew
+rlabel  s 14 18 14 23 6 SUB
+port 3 nsew
+rlabel  s 14 12 14 17 6 SUB
+port 3 nsew
+rlabel  s 14 6 14 11 6 SUB
+port 3 nsew
+rlabel  s 14 1 14 5 6 SUB
+port 3 nsew
+rlabel  s 13 18 13 23 6 SUB
+port 3 nsew
+rlabel  s 13 12 13 17 6 SUB
+port 3 nsew
+rlabel  s 13 6 13 11 6 SUB
+port 3 nsew
+rlabel  s 13 1 13 5 6 SUB
+port 3 nsew
+rlabel  s 11 23 20 23 6 SUB
+port 3 nsew
+rlabel  s 11 23 21 23 6 SUB
+port 3 nsew
+rlabel  s 11 12 12 23 6 SUB
+port 3 nsew
+rlabel  s 11 12 21 12 6 SUB
+port 3 nsew
+rlabel  s 11 11 20 11 6 SUB
+port 3 nsew
+rlabel  s 11 11 21 11 6 SUB
+port 3 nsew
+rlabel  s 11 1 12 11 6 SUB
+port 3 nsew
+rlabel  s 11 0 21 1 8 SUB
+port 3 nsew
+rlabel  s 10 12 10 23 6 SUB
+port 3 nsew
+rlabel  s 10 1 10 11 6 SUB
+port 3 nsew
+rlabel  s 9 18 9 23 6 SUB
+port 3 nsew
+rlabel  s 9 12 9 17 6 SUB
+port 3 nsew
+rlabel  s 9 6 9 11 6 SUB
+port 3 nsew
+rlabel  s 9 1 9 5 6 SUB
+port 3 nsew
+rlabel  s 8 18 8 23 6 SUB
+port 3 nsew
+rlabel  s 8 12 8 17 6 SUB
+port 3 nsew
+rlabel  s 8 6 8 11 6 SUB
+port 3 nsew
+rlabel  s 8 1 8 5 6 SUB
+port 3 nsew
+rlabel  s 6 18 7 23 6 SUB
+port 3 nsew
+rlabel  s 6 12 7 17 6 SUB
+port 3 nsew
+rlabel  s 6 6 7 11 6 SUB
+port 3 nsew
+rlabel  s 6 1 7 5 6 SUB
+port 3 nsew
+rlabel  s 5 18 5 23 6 SUB
+port 3 nsew
+rlabel  s 5 12 5 17 6 SUB
+port 3 nsew
+rlabel  s 5 6 5 11 6 SUB
+port 3 nsew
+rlabel  s 5 1 5 5 6 SUB
+port 3 nsew
+rlabel  s 3 18 4 23 6 SUB
+port 3 nsew
+rlabel  s 3 12 4 17 6 SUB
+port 3 nsew
+rlabel  s 3 6 4 11 6 SUB
+port 3 nsew
+rlabel  s 3 1 4 5 6 SUB
+port 3 nsew
+rlabel  s 2 18 2 23 6 SUB
+port 3 nsew
+rlabel  s 2 12 2 17 6 SUB
+port 3 nsew
+rlabel  s 2 6 2 11 6 SUB
+port 3 nsew
+rlabel  s 2 1 2 5 6 SUB
+port 3 nsew
+rlabel  s 1 23 10 23 6 SUB
+port 3 nsew
+rlabel  s 1 23 10 23 6 SUB
+port 3 nsew
+rlabel  s 1 12 1 23 6 SUB
+port 3 nsew
+rlabel  s 1 12 10 12 6 SUB
+port 3 nsew
+rlabel  s 1 11 10 11 6 SUB
+port 3 nsew
+rlabel  s 1 11 10 11 6 SUB
+port 3 nsew
+rlabel  s 1 1 1 11 6 SUB
+port 3 nsew
+rlabel  s 1 0 10 1 8 SUB
+port 3 nsew
+<< properties >>
+string LEFclass BLOCK
+string FIXED_BBOX 0 0 22 23
+string LEFview TRUE
+<< end >>
