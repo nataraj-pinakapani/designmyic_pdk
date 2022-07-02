@@ -1,16 +1,18 @@
 sudo apt update
 sudo apt install python3-pip
 sudo pip3 install PySpice
+sudo pip3 install kneed
 sudo snap refresh
 sudo snap install code --classic
 sudo apt install nedit
 sudo apt install git-all
+sudo apt-get install python3-tk
 #Install SKY130PDK#
 cd $HOME/Downloads
 git clone https://github.com/nataraj-pinakapani/sky130.git
 mkdir -p $HOME/projects/designmyic/cad/pdk 
 cp -r $HOME/Downloads/sky130/ $HOME/projects/designmyic/cad/pdk
-
+sudo apt-get install python3-tk
 
 #cd /home/nataraj
 #git clone git://opencircuitdesign.com/open_pdks
