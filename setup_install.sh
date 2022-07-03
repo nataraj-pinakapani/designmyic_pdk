@@ -7,6 +7,8 @@ sudo snap install code --classic
 sudo apt install nedit
 sudo apt install git-all
 sudo apt-get install python3-tk
+sudo apt install automake -y
+sudo apt install libtool -y
 #Install SKY130PDK#
 cd $HOME/Downloads
 git clone https://github.com/nataraj-pinakapani/sky130.git
