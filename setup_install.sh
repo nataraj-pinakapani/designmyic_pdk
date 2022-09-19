@@ -1,3 +1,5 @@
+cd $HOME/Downloads
+git clone https://github.com/nataraj-pinakapani/sky130.git
 sudo apt update
 sudo apt install python3-pip
 sudo pip3 install PySpice
