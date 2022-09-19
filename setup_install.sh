@@ -9,35 +9,35 @@ sudo apt install git-all
 sudo apt-get install python3-tk
 sudo apt install automake -y
 sudo apt install libtool -y
-#Install SKY130PDK#
-cd $HOME/Downloads
-git clone https://github.com/nataraj-pinakapani/sky130.git
-mkdir -p $HOME/projects/designmyic/cad/pdk 
-cp -r $HOME/Downloads/sky130/ $HOME/projects/designmyic/cad/pdk
 sudo apt-get install python3-tk
 
-#cd /home/nataraj
-#git clone git://opencircuitdesign.com/open_pdks
+#Install SKY130PDK#
+mkdir -p $HOME/projects/designmyic/cad/pdk/downloads
+mkdir -p $HOME/projects/designmyic/cad/pdk/sky130
 
-#git clone https://github.com/google/skywater-pdk
-#cd skywater-pdk
-#git submodule init libraries/sky130_fd_io/latest
-#git submodule init libraries/sky130_fd_pr/latest
-#git submodule init libraries/sky130_fd_sc_hd/latest
-#git submodule init libraries/sky130_fd_sc_hvl/latest
+cd $HOME/projects/designmyic/cad/pdk/downloads
+git clone git://opencircuitdesign.com/open_pdks
+git clone https://github.com/google/skywater-pdk.git
+cd skywater-pdk
+
+git submodule init libraries/sky130_fd_io/latest
+git submodule init libraries/sky130_fd_pr/latest
+git submodule init libraries/sky130_fd_sc_hd/latest
+git submodule init libraries/sky130_fd_sc_hvl/latest
 #git submodule init libraries/sky130_fd_sc_hdll/latest
 #git submodule init libraries/sky130_fd_sc_hs/latest
 #git submodule init libraries/sky130_fd_sc_ms/latest
 #git submodule init libraries/sky130_fd_sc_ls/latest
 #git submodule init libraries/sky130_fd_sc_lp/latest
-#git submodule update
-#make timing 
-#cd ../open_pdks
+git submodule update
+make timing 
+cd ../open_pdks
 #./configure --enable-sky130-pdk=/home/nataraj/skywater-pdk --prefix=/home/nataraj
-#./configure --enable-sky130-pdk=/home/nataraj/skywater-pdk --prefix=/home/nataraj --with-ef-style --enable-xschem-sky130 --with-sky130-variants= all
-#make
-#make install
-#make clean
+#./configure --enable-sky130-pdk=$HOME/projects/designmyic/cad/pdk/downloads/skywater-pdk --prefix=$HOME/projects/designmyic/cad/pdk/sky130 --with-ef-style --enable-xschem-sky130 --with-sky130-variants= all
+./configure  --prefix=$HOME/projects/designmyic/cad/pdk/ --enable-sky130-pdk=$HOME/projects/designmyic/cad/pdk/downloads/skywater-pdk --enable-gf180mcu-pdk=$HOME/projects/designmyic/cad/pdk/downloads/gf180mcu-pdk --with-sky130-variants= all --with-gf180mcu-variants=all --with-ef-style --enable-xschem-sky130 --enable-alpha-sky130 --enable-primitive-gf180mcu --enable-io-gf180mc
+make
+make install
+make clean
 
 #INSTALL XSCHEM
 sudo apt update
@@ -65,8 +65,19 @@ ls -l
 #This is the invoke path to open xschem
 
 #INSTALL NGSPICE
-sudo apt-get update
-sudo apt-get -y install ngspice
+cd $HOME/Downloads
+git clone git://git.code.sf.net/p/ngspice/ngspice
+cd ngspice
+sudo apt-get install libxaw7-dev
+sudo apt-get install libreadline-dev
+./autogen.sh
+./configure --enable-xspice --enable-cider --disable-debug --with-readline=yes CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"
+make clean
+make
+sudo make install
+### If you get an error during installation, copy-paste error in google, you will find which package to be installed to fix the error
+which ngspice
+### This will tell wher engspice is installed
 
 
 
