@@ -13,7 +13,6 @@ sudo apt-get install python3-tk
 
 #Install SKY130PDK#
 mkdir -p $HOME/projects/designmyic/cad/pdk/downloads
-mkdir -p $HOME/projects/designmyic/cad/pdk/sky130
 
 cd $HOME/projects/designmyic/cad/pdk/downloads
 git clone git://opencircuitdesign.com/open_pdks
@@ -32,9 +31,7 @@ git submodule init libraries/sky130_fd_sc_hvl/latest
 git submodule update
 make timing 
 cd ../open_pdks
-#./configure --enable-sky130-pdk=/home/nataraj/skywater-pdk --prefix=/home/nataraj
-#./configure --enable-sky130-pdk=$HOME/projects/designmyic/cad/pdk/downloads/skywater-pdk --prefix=$HOME/projects/designmyic/cad/pdk/sky130 --with-ef-style --enable-xschem-sky130 --with-sky130-variants= all
-./configure  --prefix=$HOME/projects/designmyic/cad/pdk/ --enable-sky130-pdk=$HOME/projects/designmyic/cad/pdk/downloads/skywater-pdk --enable-gf180mcu-pdk=$HOME/projects/designmyic/cad/pdk/downloads/gf180mcu-pdk --with-sky130-variants= all --with-gf180mcu-variants=all --with-ef-style --enable-xschem-sky130 --enable-alpha-sky130 --enable-primitive-gf180mcu --enable-io-gf180mc
+./configure  --prefix=$HOME/projects/designmyic/cad/pdk/ --enable-sky130-pdk=$HOME/projects/designmyic/cad/pdk/downloads/skywater-pdk --enable-gf180mcu-pdk=$HOME/projects/designmyic/cad/pdk/downloads/gf180mcu-pdk --with-sky130-variants= all --with-gf180mcu-variants=all --with-ef-style --enable-xschem-sky130 --enable-alpha-sky130 --enable-primitive-gf180mcu --enable-io-gf180mcu --disable-sc-7t5v0-gf180mcu  --disable-sc-9t5v0-gf180mcu --disable-sram-gf180mcu  --disable-sram-sky130
 make
 make install
 make clean
