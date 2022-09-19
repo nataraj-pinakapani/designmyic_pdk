@@ -43,8 +43,8 @@ sudo apt install libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev
 sudo apt install tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev flex bison
 sudo apt install libxpm4 libxpm-dev mawk gawk
 cd $HOME/Downloads
-tar xfz xschem-3.0.0.tar.gz
-cd xschem-3.0.0/ 
+https://github.com/StefanSchippers/xschem.git
+cd xschem
 ./configure
 make 
 sudo make install
@@ -52,8 +52,8 @@ make clean
 
 
 #INSTALL SKY130 SETUP FOR XSCHEM
-mkdir -p $HOME/projects/designmyic/cad/pdk/xschem/
-cd $HOME/projects/designmyic/cad/pdk/xschem/
+mkdir -p $HOME/projects/designmyic/cad/xschem/
+cd $HOME/projects/designmyic/cad/xschem/
 mkdir simulations
 git clone https://github.com/StefanSchippers/xschem_sky130.git
 cd xschem_sky130 
@@ -74,7 +74,7 @@ make
 sudo make install
 ### If you get an error during installation, copy-paste error in google, you will find which package to be installed to fix the error
 which ngspice
-### This will tell wher engspice is installed
+### This will tell where engspice is installed
 
 
 
