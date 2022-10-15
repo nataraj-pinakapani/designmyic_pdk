@@ -76,7 +76,7 @@ cd ngspice
 sudo apt-get install libxaw7-dev
 sudo apt-get install libreadline-dev
 ./autogen.sh
-./configure --enable-xspice --enable-cider --disable-debug --with-readline=yes CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"
+./configure --enable-xspice --enable-openmp --enable-cider --disable-debug --with-readline=yes CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"
 make clean
 make
 sudo make install
