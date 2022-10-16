@@ -46,7 +46,7 @@ make clean
 
 #INSTALL XSCHEM
 sudo apt update
-sudo apt install flex libX11-6 libx11-dev libxrender1 libxrender-dev
+sudo apt install flex libx11-6 libx11-dev libxrender1 libxrender-dev
 sudo apt install libxcb1 libx11-xcb-dev libcairo2 libcairo2-dev
 sudo apt install tcl8.6 tcl8.6-dev tk8.6 tk8.6-dev flex bison
 sudo apt install libxpm4 libxpm-dev mawk gawk
