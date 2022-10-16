@@ -13,8 +13,7 @@
 * limitations under the License.
 
 ******* SkyWater sky130 model library *********
-.subckt sky130_all_dummy
-.ends
+
 * Typical corner (tt)
 .lib tt
 .param mc_mm_switch=0

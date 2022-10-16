@@ -1,9 +1,9 @@
 set current_folder [file dirname [file normalize [info script]]]
 # Technology lib
 
-set ::env(LIB_SYNTH) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/sky130_osu_sc_TT_1P8_25C.lib"
-set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/sky130_osu_sc_FF_1P8_25C.lib"
-set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/sky130_osu_sc_SS_1P8_25C.lib"
+set ::env(LIB_SYNTH) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/lib/$::env(STD_CELL_LIBRARY)/sky130_osu_sc_TT_1P8_25C.lib"
+set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/lib/$::env(STD_CELL_LIBRARY)/sky130_osu_sc_FF_1P8_25C.lib"
+set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/lib/$::env(STD_CELL_LIBRARY)/sky130_osu_sc_SS_1p8_25C.lib"
 
 set ::env(LIB_TYPICAL) $::env(LIB_SYNTH)
 
@@ -50,8 +50,9 @@ set ::env(DIODE_CELL) "ANTFILL"
 #set ::env(FAKEDIODE_CELL) "sky130_osu_sc_t18__fakediode_2"
 set ::env(DIODE_CELL_PIN) "A"
 
-set ::env(CELL_PAD) 4
-set ::env(CELL_PAD_EXECLUDE) "FILLX*"
+set ::env(GPL_CELL_PADDING) {0}
+set ::env(DPL_CELL_PADDING) {4}
+set ::env(CELL_PAD_EXCLUDE) "FILLX*"
 
 # Clk Buffers info CTS data
 set ::env(ROOT_CLK_BUFFER) CLKBUFX1

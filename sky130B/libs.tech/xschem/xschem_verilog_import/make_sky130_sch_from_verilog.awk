@@ -1,0 +1,1 @@
+/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.tech/xschem/xschem_verilog_import/make_sky130_sch_from_verilog.awk

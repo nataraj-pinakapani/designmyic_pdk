@@ -124,8 +124,8 @@
 + sky130_fd_pr__special_nfet_pass_flash__cdscd_diff = 0.00
 + sky130_fd_pr__special_nfet_pass_flash__kt2_diff = 0.00
 + sky130_fd_pr__special_nfet_pass_flash__kt1l_diff = 0.00
-.include "../../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch__mismatch.corner.spice"
-.include "../../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass__mismatch.corner.spice"
-.include "../../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash__mismatch.corner.spice"
-.include "../../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_pass__mismatch.corner.spice"
-.include "../../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__wafer.corner.spice"
+.include "../../../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__special_nfet_latch__mismatch.corner.spice"
+.include "../../../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__special_nfet_pass__mismatch.corner.spice"
+.include "../../../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__special_nfet_pass_flash__mismatch.corner.spice"
+.include "../../../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__special_pfet_pass__mismatch.corner.spice"
+.include "../../../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__special_nfet_pass_lvt__wafer.corner.spice"

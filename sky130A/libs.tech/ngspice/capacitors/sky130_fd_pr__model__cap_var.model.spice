@@ -13,5 +13,5 @@
 * limitations under the License.
 
 * SKY130 Spice File.
-.include "../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_var_lvt.model.spice"
-.include "../../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_var_hvt.model.spice"
+.include "../../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__cap_var_lvt.model.spice"
+.include "../../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__cap_var_hvt.model.spice"

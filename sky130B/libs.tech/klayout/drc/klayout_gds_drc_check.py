@@ -1,0 +1,1 @@
+/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.tech/klayout/drc/klayout_gds_drc_check.py

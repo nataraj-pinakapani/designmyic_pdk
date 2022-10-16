@@ -6,19 +6,19 @@
 
 # The LEF file containing standard cell macros
 
-set leffile=/home/nataraj/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef
+set leffile=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/lef/sky130_fd_sc_hd/sky130_fd_sc_hd.lef
 
 # The SPICE netlist containing subcell definitions for all the standard cells
-set spicefile=/home/nataraj/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+set spicefile=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/spi/sky130_fd_sc_hd/sky130_fd_sc_hd.spi
 
 # The liberty format file containing standard cell timing and function information
-set libertyfile=/home/nataraj/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib
+set libertyfile=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/lib/sky130_fd_sc_hd/sky130_fd_sc_hd__ff_n40C_1v95.lib
 
 # If there is another LEF file containing technology information
 # that is separate from the file containing standard cell macros,
 # set this.  Otherwise, leave it defined as an empty string.
 
-set techleffile=/home/nataraj/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef
+set techleffile=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/techLEF/sky130_fd_sc_hd/sky130_fd_sc_hd__nom.tlef
 
 # All cells below should be the lowest output drive strength value,
 # if the standard cell set has multiple cells with different drive
@@ -47,12 +47,12 @@ set gndnet="vgnd,vnb"		;# Name used for ground pins and taps in standard cells
 set vddnet="vpwr,vpb"		;# Name used for power pins and taps in standard cells
 
 set separator=""		;# Separator between gate names and drive strengths
-set techfile=/home/nataraj/share/pdk/sky130A/libs.tech/magic/sky130A.tech	;# magic techfile
-set magicrc=/home/nataraj/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc	;# magic startup script
+set techfile=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.tech/magic/current/sky130A.tech	;# magic techfile
+set magicrc=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.tech/magic/current/sky130A.magicrc	;# magic startup script
 set magic_display="XR" 	;# magic display, defeat display query and OGL preference
-set netgen_setup=/home/nataraj/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl	;# netgen setup file for LVS
-set gdsfile=/home/nataraj/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds	;# GDS database of standard cells
-set verilogfile=/home/nataraj/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v	;# Verilog models of standard cells
+set netgen_setup=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl	;# netgen setup file for LVS
+set gdsfile=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/gds/sky130_fd_sc_hd/sky130_fd_sc_hd.gds	;# GDS database of standard cells
+set verilogfile=/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/verilog/sky130_fd_sc_hd/sky130_fd_sc_hd.v	;# Verilog models of standard cells
 
 # Set a conditional default in the project_vars.sh file for this process
 set postproc_options="-anchors"

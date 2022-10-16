@@ -1,6 +1,8 @@
 set XCOps(liboverride) 1
-set PDK_ROOT /home/nataraj/share/pdk
 global PDK_ROOT
+if {[catch {set PDK_ROOT $env(PDK_ROOT)}]} {
+    set PDK_ROOT /home/nataraj/projects/designmyic/cad/pdk/share/pdk
+}
 config search libraries .:$PDK_ROOT/sky130A/libs.tech/xcircuit:$XCIRCUIT_LIB_DIR
 library make generic
 library 1 load generic

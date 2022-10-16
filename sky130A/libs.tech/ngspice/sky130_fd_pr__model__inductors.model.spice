@@ -13,6 +13,6 @@
 * limitations under the License.
 
 * SKY130 Spice File.
-.include "../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_220.model.spice"
-.include "../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_05_125.model.spice"
-.include "../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__ind_03_90.model.spice"
+.include "../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__ind_05_220.model.spice"
+.include "../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__ind_05_125.model.spice"
+.include "../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__ind_03_90.model.spice"

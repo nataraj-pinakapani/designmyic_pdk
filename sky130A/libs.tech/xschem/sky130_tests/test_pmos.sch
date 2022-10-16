@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2021 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,31 +19,47 @@ K {}
 V {}
 S {}
 E {}
-B 2 880 -1060 1310 -740 {flags=graph
+B 2 1150 -1050 1580 -730 {flags=graph
 y1 = -0
 y2 = 0.00021
 divy = 5
 subdivy=1
-x1=-1.02545e-06
-x2=-1.8
+x1=-0.0516144
+x2=-1.85162
 divx=4
 subdivx=4
 node="i(vd1)
 i(vd2)"
-color="4 5" unity=u}
-B 2 1320 -1060 1750 -740 {flags=graph
-y1 = -0
-y2 = 0.00063
+color="4 5" unity=u
+dataset=8}
+B 2 1590 -1050 2020 -730 {flags=graph,unlocked
+y1 = 0
+y2 = 0.00043
 divy = 5
 subdivy=1
-x1=0
-x2=-1.8
+x1=0.301093
+x2=-10.1989
 divx=4
 subdivx=4
 node=i(vd4)
-color=4 unity=u}
-T {Select one or more graphs (and no other objects)
-and use arrow keys to zoom / pan waveforms} 870 -780 0 1 0.3 0.3 {}
+color=4 unity=u
+dataset=-1
+sweep=d10v5}
+B 2 880 -1050 1140 -730 {flags=graph
+y1 = -1.8
+y2 = 0
+divy = 5
+subdivy=4
+x1=-0.0853633
+x2=-1.88536
+divx=4
+subdivx=4
+node=g1v8
+color=4 unity=1
+dataset=8}
+T {select one single gate voltage
+by pressing 't' with mouse close
+to one of the waveforms} 1130 -1120 0 1 0.3 0.3 {}
 N 680 -490 680 -470 {lab=S}
 N 680 -440 700 -440 {lab=B}
 N 620 -440 640 -440 {lab=G1v8}
@@ -102,7 +117,7 @@ only_toplevel=true
 value="* this option enables mos model bin 
 * selection based on W/NF instead of W
 .opton wnflag=1
-*.option savecurrents
+.option savecurrents
 vg G1v8 0 0
 vs s 0 0
 vd D1v8 0 0
@@ -224,15 +239,6 @@ C {devices/lab_pin.sym} 1950 -490 2 0 {name=p48 lab=S}
 C {devices/lab_pin.sym} 1970 -440 0 1 {name=p49 lab=B}
 C {devices/ammeter.sym} 1950 -360 0 1 {name=Vd6}
 C {devices/lab_pin.sym} 1890 -440 0 0 {name=p55 lab=G5v0}
-C {devices/code.sym} 20 -190 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="
-** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt
-
-"
-spice_ignore=false}
 C {devices/launcher.sym} 435 -875 0 0 {name=h4 
 descr="Select arrow and 
 Ctrl-Left-Click to load/unload waveforms" 
@@ -8591,3 +8597,4 @@ eVtEkQEUiABSmZD/Nc9Y/qIXwXoyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAb0j5////OBTx67DbisHE
 D4QoeIrOBBeC1B2CihluUZXxHoKKt8pFSgUa24FuIBwP6VPkgaWPTOAeU+SB61IvQQWpOLZGuYd5N9NOtmoM/aBBqSi23RR6ALyOnjJH8SkDvI6OMn5R9n81GbMyAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcTH7kKqQ/7W1ZwUDh7zambVnBQOHvNqZGe+NVYa0P5EO+56OmuouCm7GunlbRJEBFIgA
 UpmQ/zXPWP6iF8F6MgAAAAAAAAAAjf5nmvo+8TRbxUpQ1I+sNvEhLwoCCgkz"}
+C {sky130_fd_pr/corner.sym} 50 -210 0 0 {name=CORNER only_toplevel=true corner=tt}

@@ -149,8 +149,8 @@
 .model mrcvia3 r tc1r = {tc1rvia3} tc2r = {tc2rvia3} res = {rcvia3} tnom = 30.0
 .model mrcvia4 r tc1r = {tc1rvia4} tc2r = {tc2rvia4} res = {rcvia4} tnom = 30.0
 .model mrcrdlcon r tc1r = {tc1rrdlcon} tc2r = {tc2rrdlcon} res = {rcrdlcon} tnom = 25.0
-.include "../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_generic_nd.model.spice"
-.include "../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_generic_pd.model.spice"
+.include "../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__res_generic_nd.model.spice"
+.include "../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__res_generic_pd.model.spice"
 * Resistor model "short" defined with a fixed resistance of 0.01 ohms.
 .model short r r=0.01
 * If "short" is called as a subcircuit, then this needs to be supported, too.

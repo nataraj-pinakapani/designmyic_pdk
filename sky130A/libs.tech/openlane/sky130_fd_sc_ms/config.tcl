@@ -1,9 +1,9 @@
 set current_folder [file dirname [file normalize [info script]]]
 # Technology lib
 
-set ::env(LIB_SYNTH) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/sky130_fd_sc_ms__tt_025C_1v80.lib"
-set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/sky130_fd_sc_ms__ff_n40C_1v95.lib"
-set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/$::env(STD_CELL_LIBRARY)/lib/sky130_fd_sc_ms__ss_100C_1v60.lib"
+set ::env(LIB_SYNTH) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/lib/$::env(STD_CELL_LIBRARY)/sky130_fd_sc_ms__tt_025C_1v80.lib"
+set ::env(LIB_FASTEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/lib/$::env(STD_CELL_LIBRARY)/sky130_fd_sc_ms__ff_n40C_1v95.lib"
+set ::env(LIB_SLOWEST) "$::env(PDK_ROOT)/$::env(PDK)/libs.ref/lib/$::env(STD_CELL_LIBRARY)/sky130_fd_sc_ms__ss_100C_1v60.lib"
 
 set ::env(LIB_TYPICAL) $::env(LIB_SYNTH)
 
@@ -49,7 +49,8 @@ set ::env(RE_BUFFER_CELL) "sky130_fd_sc_ms__buf_4"
 set ::env(DIODE_CELL) "sky130_fd_sc_ms__diode_2"
 set ::env(DIODE_CELL_PIN) "DIODE"
 
-set ::env(CELL_PAD) 4
+set ::env(GPL_CELL_PADDING) {0}
+set ::env(DPL_CELL_PADDING) {4}
 set ::env(CELL_PAD_EXCLUDE) "$::env(STD_CELL_LIBRARY)__tap* $::env(STD_CELL_LIBRARY)__decap* $::env(STD_CELL_LIBRARY)__fill*"
 
 # Clk Buffers info CTS data
@@ -57,7 +58,7 @@ set ::env(ROOT_CLK_BUFFER) $::env(STD_CELL_LIBRARY)__clkbuf_16
 set ::env(CLK_BUFFER) $::env(STD_CELL_LIBRARY)__clkbuf_4
 set ::env(CLK_BUFFER_INPUT) A
 set ::env(CLK_BUFFER_OUTPUT) X
-set ::env(CTS_CLK_BUFFER_LIST) "sky130_fd_sc_ms__clkbuf_2 sky130_fd_sc_ms__clkbuf_4 sky130_fd_sc_ms__clkbuf_8"
+set ::env(CTS_CLK_BUFFER_LIST) "sky130_fd_sc_ms__clkbuf_8 sky130_fd_sc_ms__clkbuf_4 sky130_fd_sc_ms__clkbuf_2"
 set ::env(CTS_MAX_CAP) 1.53169
 set ::env(DEFAULT_MAX_TRAN) 0.75
 set ::env(FP_PDN_RAIL_WIDTH) 0.48

@@ -1,0 +1,4 @@
+./custom/sky130_fd_sc_hd/verilog/*.v
+/home/nataraj/projects/designmyic/cad/pdk/downloads/skywater-pdk/libraries/sky130_fd_sc_hd/latest/models/*/*.v
+/home/nataraj/projects/designmyic/cad/pdk/downloads/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/*/*.*.v
+/home/nataraj/projects/designmyic/cad/pdk/downloads/skywater-pdk/libraries/sky130_fd_sc_hd/latest/cells/*/*.v

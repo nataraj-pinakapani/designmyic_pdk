@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2021 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -239,12 +238,14 @@ C {devices/lab_pin.sym} 750 -530 0 1 {name=l6 sig_type=std_logic lab=MINUS}
 C {devices/ngspice_get_expr.sym} 1070 -470 0 1 {name=r10 node="[ngspice::get_current v3]"}
 C {devices/ngspice_get_expr.sym} 290 -340 0 1 {name=r11 node="[ngspice::get_current V5]"}
 C {devices/vsource.sym} 320 -350 0 0 {name=V5 value=0}
-C {devices/code.sym} 1050 -340 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="
-** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt
-
-"
-spice_ignore=false}
+C {devices/device_param_probe.sym} 460 -530 0 1 {name=r12
+devicename=M2
+devicemodel=nfet_01v8_lvt
+deviceparam=gm}
+C {devices/device_param_probe.sym} 170 -530 0 1 {name=r13
+devicename=M1
+devicemodel=nfet_01v8_lvt
+deviceparam=gm}
+C {sky130_fd_pr/corner.sym} 1050 -360 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {devices/ngspice_get_value.sym} 280 -250 0 1 {name=r14 node=v(@m.$\{path\}xm5.msky130_fd_pr__nfet_01v8[vth])
+descr="vth="}

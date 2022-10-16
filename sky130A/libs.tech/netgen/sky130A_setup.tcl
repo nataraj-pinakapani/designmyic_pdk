@@ -17,10 +17,6 @@ catch {format $env(NETGEN_COLUMNS)}
 set cells1 [cells list -all -circuit1]
 set cells2 [cells list -all -circuit2]
 
-# NOTE:  In accordance with the LVS manager GUI, the schematic is
-# always circuit2, so some items like property "par1" only need to
-# be specified for circuit2.
-
 #-------------------------------------------
 # Resistors (except metal)
 #-------------------------------------------
@@ -125,6 +121,7 @@ lappend devices sky130_fd_pr__nfet_01v8
 lappend devices sky130_fd_pr__nfet_01v8_lvt
 lappend devices sky130_fd_bs_flash__special_sonosfet_star
 lappend devices sky130_fd_pr__nfet_g5v0d10v5
+lappend devices sky130_fd_pr__nfet_03v3_nvt
 lappend devices sky130_fd_pr__nfet_05v0_nvt
 lappend devices sky130_fd_pr__pfet_01v8
 lappend devices sky130_fd_pr__pfet_01v8_lvt
@@ -137,9 +134,6 @@ lappend devices sky130_fd_pr__special_nfet_latch
 lappend devices sky130_fd_pr__cap_var_lvt
 lappend devices sky130_fd_pr__cap_var_hvt
 lappend devices sky130_fd_pr__cap_var
-lappend devices sky130_fd_pr__nfet_20v0_nvt
-lappend devices sky130_fd_pr__nfet_20v0
-lappend devices sky130_fd_pr__pfet_20v0
 
 foreach dev $devices {
     if {[lsearch $cells1 $dev] >= 0} {
@@ -163,11 +157,45 @@ foreach dev $devices {
 }
 
 #---------------------------------------------------------------------
+# Extended drain MOSFET devices.  These have asymmetric source and
+# drain, and so the source and drain are not permutable.
+#---------------------------------------------------------------------
+
+set devices {}
+lappend devices sky130_fd_pr__nfet_20v0_zvt
+lappend devices sky130_fd_pr__nfet_20v0_nvt
+lappend devices sky130_fd_pr__nfet_20v0_iso
+lappend devices sky130_fd_pr__nfet_20v0
+lappend devices sky130_fd_pr__pfet_20v0
+lappend devices sky130_fd_pr__nfet_g5v0d16v0
+lappend devices sky130_fd_pr__pfet_g5v0d16v0
+
+foreach dev $devices {
+    if {[lsearch $cells1 $dev] >= 0} {
+	property "-circuit1 $dev" parallel enable
+	property "-circuit1 $dev" parallel {l critical}
+	property "-circuit1 $dev" parallel {w add}
+	property "-circuit1 $dev" tolerance {w 0.01} {l 0.01}
+	# Ignore these properties
+	property "-circuit1 $dev" delete as ad ps pd mult sa sb sd nf nrd nrs area perim topography
+    }
+    if {[lsearch $cells2 $dev] >= 0} {
+	property "-circuit2 $dev" parallel enable
+	property "-circuit2 $dev" parallel {l critical}
+	property "-circuit2 $dev" parallel {w add}
+	property "-circuit2 $dev" tolerance {w 0.01} {l 0.01}
+	# Ignore these properties
+	property "-circuit2 $dev" delete as ad ps pd mult sa sb sd nf nrd nrs area perim topography
+    }
+}
+
+#---------------------------------------------------------------------
 # (MOS) ESD transistors.  Note that the ESD transistors have a flanged
 # gate.  Magic disagrees slightly on how to interpret the width of the
 # devices, so the tolerance is increased to 7% to cover the difference
 #---------------------------------------------------------------------
 
+set devices {}
 lappend devices sky130_fd_pr__esd_nfet_g5v0d10v5
 lappend devices sky130_fd_pr__esd_pfet_g5v0d10v5
 
@@ -358,6 +386,9 @@ if { [info exist ::env(MAGIC_EXT_USE_GDS)] && $::env(MAGIC_EXT_USE_GDS) } {
 #---------------------------------------------------------------
 
 foreach cell $cells1 {
+    if {[regexp {sky130_ef_sc_[^_]+__decap_[[:digit:]]+} $cell match]} {
+	property "-circuit1 $cell" parallel enable
+    }
     if {[regexp {sky130_fd_sc_[^_]+__decap_[[:digit:]]+} $cell match]} {
 	property "-circuit1 $cell" parallel enable
     }
@@ -378,6 +409,9 @@ foreach cell $cells1 {
     }
 }
 foreach cell $cells2 {
+    if {[regexp {sky130_ef_sc_[^_]+__decap_[[:digit:]]+} $cell match]} {
+	property "-circuit2 $cell" parallel enable
+    }
     if {[regexp {sky130_fd_sc_[^_]+__decap_[[:digit:]]+} $cell match]} {
 	property "-circuit2 $cell" parallel enable
     }

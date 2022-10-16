@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2021 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,62 +19,89 @@ K {}
 V {}
 S {}
 E {}
-B 2 630 -940 1660 -650 {flags=graph
+B 2 260 -1150 1400 -800 {flags=graph
 digital=1
 y1=-0.12
 y2=1.9
 divy=4
-subdivy=1
+
 x1=0
 x2=8e-08
-ypos1=0.0757089
-ypos2=1.62518
-divx=5
-subdivx=1
-node="xschem
+ypos1=0.1619
+ypos2=1.51212
+divx=10
+subdivx=4
+node="\\"OUTPUTS
+SPICE; nothing\\"
+q
+x
+y
+qlatch
+xschem"
+color="9 10 10 10 10 10"
+dataset=0
+unitx=n
+ subdivy=1}
+B 2 260 -800 1400 -450 {flags=graph
+digital=1
+y1=-0.12
+y2=1.9
+divy=4
+
+x1=0
+x2=8e-08
+ypos1=0.177443
+ypos2=1.52431
+divx=10
+subdivx=4
+node="\\"OUTPUTS
+XSPICE; nothing\\"
+x_q
+x_x
+x_y
+x_qlatch
+x_xschem"
+color="9 8 8 8 8 8"
+dataset=0
+unitx=n
+ subdivy=1}
+B 2 260 -1500 1400 -1150 {flags=graph
+digital=1
+y1=-0.12
+y2=1.9
+divy=4
+
+x1=0
+x2=8e-08
+ypos1=0.0842025
+ypos2=1.28762
+divx=10
+subdivx=4
+node="\\"INPUTS; nothing\\"
 clk
 a
 b
-reset_b
-qlatch 
-q"
-color="7 8 10 11 12 13 14"
+reset_b"
+color="9 4 4 4 4"
 dataset=0
 unitx=n
- }
-N 60 -310 60 -290 { lab=A}
-N 60 -200 60 -180 { lab=B}
-N 380 -260 480 -260 { lab=X}
-N 60 -450 60 -430 { lab=CLK}
-N 60 -570 60 -550 { lab=RESET_B}
-N 400 -520 440 -520 { lab=Y}
-N 850 -550 870 -550 { lab=Qlatch}
-N 770 -530 780 -530 { lab=#net1}
-N 1170 -500 1190 -500 { lab=#net2}
-N 1170 -560 1170 -500 { lab=#net2}
-N 1140 -560 1170 -560 { lab=#net2}
-N 400 -620 400 -520 { lab=Y}
-N 1300 -520 1350 -520 { lab=#net3}
-N 1310 -480 1350 -480 { lab=#net4}
-N 1350 -440 1350 -420 { lab=Q}
-N 340 -520 400 -520 { lab=Y}
-N 440 -420 1350 -420 { lab=Q}
-N 1340 -400 1340 -350 { lab=RESET_B}
-N 1340 -400 1350 -400 { lab=RESET_B}
-N 850 -460 1190 -460 { lab=Qlatch}
-N 850 -550 850 -460 { lab=Qlatch}
-N 1510 -460 1560 -460 { lab=XSCHEM}
-N 260 -350 1340 -350 { lab=RESET_B}
-N 260 -380 260 -350 { lab=RESET_B}
-N 970 -620 970 -580 { lab=Y}
-N 970 -580 1020 -580 { lab=Y}
-N 770 -550 850 -550 { lab=Qlatch}
-N 400 -620 970 -620 { lab=Y}
-N 970 -620 1140 -620 { lab=Y}
-N 1300 -620 1300 -520 { lab=#net3}
-N 1220 -620 1300 -620 { lab=#net3}
-C {devices/title.sym} 160 -30 0 0 {name=l1 author="Stefan Schippers"}
-C {devices/code.sym} 540 -190 0 0 {name=STIMULI 
+ subdivy=1}
+T {Comparison of transistor level vs Xspice simulation
+xspice netlist obtained with spi2xspice.py script
+from qflow.} 1450 -1460 0 0 1 1 {}
+N 50 -580 50 -560 { lab=A}
+N 50 -470 50 -450 { lab=B}
+N 50 -720 50 -700 { lab=CLK}
+N 50 -840 50 -820 { lab=RESET_B}
+C {devices/code.sym} 860 -190 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval(@value )"
+value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false
+place=header}
+C {devices/code_shown.sym} 30 -330 0 0 {name=STIMULI 
 only_toplevel=true
 value="
 .options acct list
@@ -83,66 +109,92 @@ value="
 vvcc vcc 0 dc 1.8
 vvss vss 0 0
 .control
-tran 30p 80n
-plot a b+2 clk+4 reset_b+6 x+8 y+10 q+12 qlatch+14
-write test_stdcells.raw
+  esave all
+  tran 30p 80n
+  plot clk+18 a+16 b+14 reset_b+12 q+10 x+6 y+4 qlatch+2 xschem
+  write test_stdcells.raw
+  eprvcd x1.IQ x1.IQLATCH x1.iX x1.iY x1.IXSCHEM x1.RESET_B
++ x1.A x1.B x1.CLK > test_stdcells.vcd
 .endc
 "}
-C {devices/lab_pin.sym} 260 -280 0 0 {name=p1 lab=A}
-C {devices/lab_pin.sym} 260 -240 0 0 {name=p2 lab=B}
-C {devices/lab_pin.sym} 480 -260 0 1 {name=p3 lab=X}
-C {sky130_stdcells/nand2_1.sym} 320 -260 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ }
-C {devices/sqwsource.sym} 60 -260 0 0 {name=V1 vhi=1.8 freq=0.09e9}
-C {devices/sqwsource.sym} 60 -150 0 0 {name=V2 vhi=1.8 freq=0.02e9}
-C {devices/lab_pin.sym} 60 -120 0 0 {name=p4 lab=0}
-C {devices/lab_pin.sym} 60 -230 0 0 {name=p5 lab=0}
-C {devices/lab_pin.sym} 60 -310 0 1 {name=p6 lab=A}
-C {devices/lab_pin.sym} 60 -200 0 1 {name=p7 lab=B}
-C {devices/parax_cap.sym} 420 -250 0 0 {name=C1 gnd=0 value=3f m=1}
-C {sky130_stdcells/dfrtp_1.sym} 350 -400 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
-}
-C {devices/sqwsource.sym} 60 -400 0 0 {name=V3 vhi=1.8 freq=0.2e9}
-C {devices/lab_pin.sym} 60 -370 0 0 {name=p8 lab=0}
-C {devices/lab_pin.sym} 60 -450 0 1 {name=p9 lab=CLK}
-C {devices/lab_pin.sym} 260 -420 0 0 {name=p10 lab=CLK}
-C {devices/lab_pin.sym} 260 -400 0 0 {name=p11 lab=A}
-C {devices/sqwsource.sym} 60 -520 0 0 {name=V4 vhi=1.8 freq=0.7e8}
-C {devices/lab_pin.sym} 60 -490 0 0 {name=p12 lab=0}
-C {devices/lab_pin.sym} 60 -570 0 1 {name=p13 lab=RESET_B}
-C {devices/lab_pin.sym} 260 -380 0 0 {name=p14 lab=RESET_B}
-C {devices/lab_wire.sym} 540 -420 0 1 {name=l15 lab=Q}
-C {devices/parax_cap.sym} 480 -410 0 0 {name=C2 gnd=0 value=3f m=1}
-C {devices/lab_pin.sym} 220 -540 0 0 {name=p16 lab=A}
-C {devices/lab_pin.sym} 220 -500 0 0 {name=p17 lab=B}
-C {devices/lab_pin.sym} 440 -520 0 1 {name=p18 lab=Y}
-C {devices/parax_cap.sym} 380 -510 0 0 {name=C3 gnd=0 value=3f m=1}
-C {sky130_stdcells/nor2b_1.sym} 280 -520 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/dlrbn_1.sym} 680 -530 0 0 {name=x4 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 590 -530 0 0 {name=p19 lab=CLK}
-C {devices/lab_pin.sym} 590 -550 0 0 {name=p20 lab=A}
-C {devices/lab_pin.sym} 590 -510 0 0 {name=p21 lab=RESET_B}
-C {devices/lab_pin.sym} 870 -550 0 1 {name=p22 lab=Qlatch}
-C {devices/parax_cap.sym} 810 -540 0 0 {name=C4 gnd=0 value=3f m=1}
-C {devices/lab_pin.sym} 1020 -540 0 0 {name=p24 lab=B}
-C {sky130_stdcells/nor2b_1.sym} 1080 -560 0 0 {name=x5 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/nand2_1.sym} 1250 -480 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/a31o_2.sym} 1430 -460 0 0 {name=x7 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 1560 -460 0 1 {name=p15 lab=XSCHEM}
-C {devices/noconn.sym} 780 -530 2 0 {name=l2}
-C {devices/noconn.sym} 1520 -460 3 0 {name=l3}
-C {sky130_stdcells/inv_2.sym} 1180 -620 0 0 {name=x8 VGND=VSS VNB=VSS VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ }
-C {devices/code.sym} 860 -190 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
-.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
-"
-spice_ignore=false}
-C {devices/launcher.sym} 155 -795 0 0 {name=h1 
+C {devices/sqwsource.sym} 50 -530 0 0 {name=V1 vhi=1.8 freq=0.09e9}
+C {devices/sqwsource.sym} 50 -420 0 0 {name=V2 vhi=1.8 freq=0.02e9}
+C {devices/lab_pin.sym} 50 -390 0 0 {name=p4 lab=0}
+C {devices/lab_pin.sym} 50 -500 0 0 {name=p5 lab=0}
+C {devices/lab_pin.sym} 50 -580 0 1 {name=p6 lab=A}
+C {devices/lab_pin.sym} 50 -470 0 1 {name=p7 lab=B}
+C {devices/sqwsource.sym} 50 -670 0 0 {name=V3 vhi=1.8 freq=0.2e9}
+C {devices/lab_pin.sym} 50 -640 0 0 {name=p8 lab=0}
+C {devices/lab_pin.sym} 50 -720 0 1 {name=p9 lab=CLK}
+C {devices/sqwsource.sym} 50 -790 0 0 {name=V4 vhi=1.8 freq=0.7e8}
+C {devices/lab_pin.sym} 50 -760 0 0 {name=p12 lab=0}
+C {devices/lab_pin.sym} 50 -840 0 1 {name=p13 lab=RESET_B}
+C {devices/title.sym} 160 -30 0 0 {name=l1 author="Stefan Schippers"}
+C {devices/launcher.sym} 655 -385 0 0 {name=h1 
 descr="Select arrow and 
 Ctrl-Left-Click to load/unload waveforms
 after running simulation" 
 tclcommand="
 xschem raw_read $netlist_dir/[file tail [file rootname [xschem get current_name]]].raw
 "
+}
+C {sky130_tests/stdcells.sym} 1340 -280 0 0 {name=x2}
+C {devices/lab_pin.sym} 1490 -330 0 1 {name=p1 lab=QLATCH}
+C {devices/lab_pin.sym} 1190 -330 0 0 {name=p2 lab=A}
+C {devices/lab_pin.sym} 1490 -310 0 1 {name=p3 lab=X}
+C {devices/lab_pin.sym} 1190 -310 0 0 {name=p4 lab=B}
+C {devices/lab_pin.sym} 1490 -290 0 1 {name=p5 lab=Y}
+C {devices/lab_pin.sym} 1190 -290 0 0 {name=p6 lab=CLK}
+C {devices/lab_pin.sym} 1490 -270 0 1 {name=p7 lab=Q}
+C {devices/lab_pin.sym} 1190 -270 0 0 {name=p8 lab=RESET_B}
+C {devices/lab_pin.sym} 1490 -250 0 1 {name=p9 lab=XSCHEM}
+C {devices/lab_pin.sym} 1190 -250 0 0 {name=p10 lab=VCC}
+C {devices/lab_pin.sym} 1190 -230 0 0 {name=p11 lab=VSS}
+C {sky130_tests/stdcells_xspice.sym} 1340 -130 0 0 {name=x1}
+C {devices/lab_pin.sym} 1490 -180 0 1 {name=p1 lab=X_QLATCH}
+C {devices/lab_pin.sym} 1190 -180 0 0 {name=p2 lab=A}
+C {devices/lab_pin.sym} 1490 -160 0 1 {name=p3 lab=X_X}
+C {devices/lab_pin.sym} 1190 -160 0 0 {name=p4 lab=B}
+C {devices/lab_pin.sym} 1490 -140 0 1 {name=p5 lab=X_Y}
+C {devices/lab_pin.sym} 1190 -140 0 0 {name=p6 lab=CLK}
+C {devices/lab_pin.sym} 1490 -120 0 1 {name=p7 lab=X_Q}
+C {devices/lab_pin.sym} 1190 -120 0 0 {name=p8 lab=RESET_B}
+C {devices/lab_pin.sym} 1490 -100 0 1 {name=p9 lab=X_XSCHEM}
+C {devices/lab_pin.sym} 1190 -100 0 0 {name=p10 lab=VCC}
+C {devices/lab_pin.sym} 1190 -80 0 0 {name=p11 lab=VSS}
+C {devices/code_shown.sym} 1440 -1050 0 0 {name=XSPICE_MODELS 
+only_toplevel=true
+value=".model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=200p fall_delay=200p)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0 out_undef=0.9
++ t_rise=200p t_fall=200p input_load=10f )
+
+.model ddflop d_dff(ic=0 rise_delay=200p fall_delay=200p
++ clk_delay=20p reset_delay=20p data_load=10f reset_load=10f clk_load=10f)
+.model dlatch d_dlatch(ic=0 rise_delay=200p fall_delay=200p
++ data_delay = 20p enable_delay=20p reset_delay=200p data_load=10f reset_load=10f enable_load=10f)
+.model dzero d_pulldown(load=10f)
+.model done d_pullup(load=10f)
+
+* sky130_fd_sc_hd__nand2_1 (!A) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2_1 d_lut (rise_delay=200p fall_delay=200p input_load=10f
++ table_values \\"1110\\")
+* sky130_fd_sc_hd__dfrtp_1 IQ
+* sky130_fd_sc_hd__nor2b_1 (!A&B_N)
+.model d_lut_sky130_fd_sc_hd__nor2b_1 d_lut (rise_delay=200p fall_delay=200p input_load=10f
++ table_values \\"0010\\")
+* sky130_fd_sc_hd__dlrbn_1 IQ
+* sky130_fd_sc_hd__a31o_2 (A1&A2&A3) | (B1)
+.model d_lut_sky130_fd_sc_hd__a31o_2 d_lut (rise_delay=200p fall_delay=200p input_load=10f
++ table_values \\"0000000111111111\\")
+* sky130_fd_sc_hd__inv_2 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_2 d_lut (rise_delay=200p fall_delay=200p input_load=10f
++ table_values \\"10\\")
+* sky130_fd_sc_hd__buf_2 (A)
+.model d_lut_sky130_fd_sc_hd__buf_2 d_lut (rise_delay=200p fall_delay=200p input_load=10f
++ table_values \\"01\\")
+
+"}
+C {devices/launcher.sym} 660 -310 0 0 {name=h2
+descr="View Raw file" 
+tclcommand="textwindow $netlist_dir/[file tail [file rootname [ xschem get schname 0 ] ] ].raw"
 }

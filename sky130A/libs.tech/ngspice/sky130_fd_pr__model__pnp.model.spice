@@ -17,5 +17,5 @@
 *   mismatch {
 *   }
 * }
-.include "../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pnp_05v5_W0p68L0p68.model.spice"
-.include "../../libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+.include "../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__pnp_05v5_W0p68L0p68.model.spice"
+.include "../../libs.ref/spi/sky130_fd_pr/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"

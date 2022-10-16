@@ -1,0 +1,1 @@
+/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/mag/sky130_fd_sc_hvl/generate_magic.tcl

@@ -1,5 +1,4 @@
-v {xschem version=3.0.0 file_version=1.2 
-
+v {xschem version=3.1.0 file_version=1.2
 * Copyright 2021 Stefan Frederik Schippers
 * 
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -88,11 +87,22 @@ value="
 .options savecurrents
 .control
 save all
+save @m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[gm]
+save @m.x1.xm2.msky130_fd_pr__nfet_01v8_lvt[gm]
+save @m.x1.xm3.msky130_fd_pr__pfet_01v8_lvt[gm]
+save @m.x1.xm4.msky130_fd_pr__pfet_01v8_lvt[gm]
 save @m.x1.xm5.msky130_fd_pr__nfet_01v8[gm]
+save @m.x1.xm5.msky130_fd_pr__nfet_01v8[vth]
+save @m.x2.xm1.msky130_fd_pr__nfet_01v8_lvt[gm]
+save @m.x2.xm2.msky130_fd_pr__nfet_01v8_lvt[gm]
+save @m.x2.xm3.msky130_fd_pr__pfet_01v8_lvt[gm]
+save @m.x2.xm4.msky130_fd_pr__pfet_01v8_lvt[gm]
 save @m.x2.xm5.msky130_fd_pr__nfet_01v8[gm]
+save @m.x2.xm5.msky130_fd_pr__nfet_01v8[vth]
 op
 write test_analog.raw
 .endc
+.print @m.x2.xm5.msky130_fd_pr__nfet_01v8[vth]
 "}
 C {sky130_tests/n_diffamp.sym} 330 -200 0 0 {name=x1}
 C {sky130_tests/n_diffamp.sym} 330 -480 0 0 {name=x2}
@@ -151,12 +161,4 @@ C {devices/gnd.sym} 440 -140 0 1 {name=l21 lab=GND}
 C {devices/ngspice_get_value.sym} 500 -90 0 0 {name=r9 node=i(@b.$\{path\}xr2.xsky130_fd_pr__res_xhigh_po_0p35.brbody[i])
 descr="I="}
 C {devices/ngspice_get_expr.sym} 950 -690 0 1 {name=r8 node="[ngspice::get_current v3]"}
-C {devices/code.sym} 1050 -370 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="
-** opencircuitdesign pdks install
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt
-
-"
-spice_ignore=false}
+C {sky130_fd_pr/corner.sym} 1050 -370 0 0 {name=CORNER only_toplevel=true corner=tt}
