@@ -12,6 +12,7 @@ sudo apt-get install python3-tk
 sudo apt install automake -y
 sudo apt install libtool -y
 sudo apt-get install python3-tk
+sudo apt-get install xterm
 
 #Install SKY130PDK#
 mkdir -p $HOME/projects/designmyic/cad/pdk/downloads
