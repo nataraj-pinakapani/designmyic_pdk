@@ -1,1 +1,0 @@
-/home/nataraj/projects/designmyic/cad/pdk/downloads/skywater-pdk/libraries/sky130_fd_sc_hvl/latest/cells/*/*.cdl

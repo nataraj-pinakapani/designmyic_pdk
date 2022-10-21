@@ -1,1 +1,0 @@
-/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.tech/xschem/decred_hash_macro/decred_hash_macro.sch

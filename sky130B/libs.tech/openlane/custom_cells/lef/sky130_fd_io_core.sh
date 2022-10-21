@@ -1,1 +1,0 @@
-/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.tech/openlane/custom_cells/lef/sky130_fd_io_core.sh

@@ -1,1 +1,0 @@
-/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/verilog/sky130_fd_io/sky130_ef_io.v

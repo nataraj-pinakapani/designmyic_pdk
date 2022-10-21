@@ -1,8 +1,0 @@
-magic
-tech sky130A
-timestamp 1663361622
-<< properties >>
-string GDS_END 35416562
-string GDS_FILE $PDKPATH/libs.ref/gds/sky130_fd_io/sky130_fd_io.gds
-string GDS_START 35415858
-<< end >>

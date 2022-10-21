@@ -1,1 +1,0 @@
-/home/nataraj/projects/designmyic/cad/pdk/share/pdk/sky130A/libs.ref/scripts/sky130_ml_xx_hd/text2mag.py

@@ -1,8 +1,0 @@
-magic
-tech minimum
-timestamp 1644097873
-<< properties >>
-string gencell sky130_fd_pr__rf_test_coil3
-string parameter m=1
-string library sky130
-<< end >>
