@@ -75,6 +75,11 @@ sudo make install
 which ngspice
 ### This will tell where ngspice is installed
 
+cd $HOME/projects/designmyic/cad/pdk/downloads
+git clone https://github.com/nataraj-pinakapani/cygnus.git
+cd  cygnus
+./install.sh
+
 
 
 
