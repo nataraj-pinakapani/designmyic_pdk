@@ -48,8 +48,10 @@ make clean
 
 #INSTALL NGSPICE
 cd $HOME/projects/designmyic/cad/pdk/downloads
-cd ngspice
-
+git clone https://github.com/nataraj-pinakapani/designmyic_pdk.git
+cd designmyic_pdk
+tar xfz ngspice-37.tar.gz
+cd ngspice-37
 sudo apt-get install libxaw7-dev
 sudo apt-get install libreadline-dev
 ./configure --enable-xspice --disable-debug --with-readline=yes
@@ -61,10 +63,6 @@ sudo make install
 which ngspice
 ### This will tell where ngspice is installed
 
-cd $HOME/projects/designmyic/cad/pdk/downloads
-git clone https://github.com/nataraj-pinakapani/cygnus.git
-cd  cygnus
-./install.sh
 
 mkdir -p $HOME/projects/designmyic/cad/sky130_invoke/xschem
 cd $HOME/projects/designmyic/cad/sky130_invoke/xschem
@@ -78,7 +76,7 @@ ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/gf180mcuC/libs.tech/xschem/sym
 ln -s symbols gf180mcu_fd_pr
 ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/gf180mcuC/libs.tech/xschem/tests/
 ln -s tests gf180mcu_tests
-cp $HOME/projects/designmyic/cad/pdk/share/pdk/gf180mcuC/libs.tech/xschem/xschemrc .
+cp $HOME/projects/designmyic/cad/pdk/downloads/designmyic_pdk/xschemrc .
 
 export PDK_ROOT=$HOME/projects/designmyic/cad/pdk/share/pdk
 
@@ -86,3 +84,8 @@ ln -s design.ngspice design.spice
 ln -s sm141064.ngspice  sm141064.spice
 ln -s smbb000149.ngspice smbb000149.spice
 
+
+cd $HOME/projects/designmyic/cad/pdk/downloads
+git clone https://github.com/nataraj-pinakapani/cygnus.git
+cd  cygnus
+./install.sh
