@@ -43,7 +43,7 @@ git clone https://github.com/StefanSchippers/xschem.git
 cd xschem
 ./configure
 make 
-sudo make install
+sudo make install	
 make clean
 
 #INSTALL NGSPICE
