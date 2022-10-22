@@ -60,13 +60,12 @@ sudo make install
 make clean
 
 #INSTALL NGSPICE
-cd $HOME/Downloads
-git clone git://git.code.sf.net/p/ngspice/ngspice
+cd $HOME/projects/designmyic/cad/pdk/downloads
 cd ngspice
+
 sudo apt-get install libxaw7-dev
 sudo apt-get install libreadline-dev
-./autogen.sh
-./configure --enable-xspice --enable-openmp --enable-cider --disable-debug --with-readline=yes CFLAGS="-m64 -O2" LDFLAGS="-m64 -s"
+./configure --enable-xspice --disable-debug --with-readline=yes
 make clean
 make
 sudo make install
@@ -80,7 +79,37 @@ git clone https://github.com/nataraj-pinakapani/cygnus.git
 cd  cygnus
 ./install.sh
 
+mkdir -p $HOME/projects/designmyic/cad/sky130_invoke
+cd $HOME/projects/designmyic/cad/sky130_invoke
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/decred_hash_macro
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/mips_cpu
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/sky130_fd_pr
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/sky130_stdcells
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/stdcells
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/xschem_verilog_import
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/LICENSE
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/README.md
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/scripts
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/sky130_fd_pr.patch
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/sky130_tests
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/xschemrc
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/ngspice/spinit
 
+mkdir -p $HOME/projects/designmyic/cad/gf180mcu_invoke
+cd $HOME/projects/designmyic/cad/gf180mcu_invoke
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/decred_hash_macro
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/mips_cpu
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/sky130_fd_pr
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/sky130_stdcells
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/stdcells
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/xschem_verilog_import
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/LICENSE
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/README.md
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/scripts
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/sky130_fd_pr.patch
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/sky130_tests
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/xschemrc
+ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/ngspice/spinit
 
-
-
+mkdir -p $HOME/projects/designmyic/cad/gf180mcu_invoke
+cd $HOME/projects/designmyic/cad/gf180mcu_invoke
