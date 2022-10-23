@@ -79,7 +79,7 @@ ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/xschem/sky13
 ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/xschem/sky130_tests/
 ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/xschem/stdcells/
 ln -s $HOME/projects/designmyic/cad/pdk/share/pdk/sky130B/libs.tech/xschem/xschem_verilog_import/
-
+cp $HOME/projects/designmyic/cad/pdk/downloads/designmyic_pdk/sky130_xschemrc xschemrc
 
 
 mkdir -p $HOME/projects/designmyic/cad/gf180mcu_invoke/xschem/simulations
