@@ -80,6 +80,7 @@ cp $HOME/projects/designmyic/cad/pdk/downloads/designmyic_pdk/xschemrc .
 
 export PDK_ROOT=$HOME/projects/designmyic/cad/pdk/share/pdk
 
+cd $HOME/projects/designmyic/cad/pdk/share/pdk/gf180mcuC/libs.tech/ngspice
 ln -s design.ngspice design.spice
 ln -s sm141064.ngspice  sm141064.spice
 ln -s smbb000149.ngspice smbb000149.spice
